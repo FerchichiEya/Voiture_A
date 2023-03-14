@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="body d-md-flex align-items-center justify-content-between">
+      <div class="box-1 mt-md-0 mt-5">
+        <img src="https://www.citroen.tn/wp-content/uploads/2019/02/r%C3%A9ussir-son-inscription.png"
+        class="" alt="">
+      </div>
+      <div class=" box-2 d-flex flex-column h-100">
+        <br>
+        <div class="mt-5">
+        <div class="login-header">
+          <h3>S'inscrire</h3><br>
+        </div>
+        
+          
+            <form class="login-form">
+              <label>Nom Utilisateur :</label>
+              <input  [(ngModel)]="newUser.username"  [ngModelOptions]="{standalone:true}" type="name" matInput placeholder="Nom D'utilisateur"  class="form-control">
+
+              <br>
+              <label> Mot de passe : </label>
+              <input  [(ngModel)]="newUser.password"  [ngModelOptions]="{standalone:true}" type="password" matInput placeholder="Mot De Passe"  class="form-control"><br>
+
+              <br>
+              <button class="btn btn-success" (click)="createUser(newUser)" type="submit">S’inscrire</button>
+          </form> <br>
+          <a [routerLink]="['/login']">Avez déja un compte </a>
+ 
+                  
+              
+          </div>
+         
+      </div>
+      <span class="fas fa-times"></span>
+  </div>
+</div>

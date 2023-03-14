@@ -1,0 +1,46 @@
+
+<header>
+  <div  class="container">
+      <a routerLink="/" class="logo">My Car</a>
+      <nav>
+          <UL>
+            <li class="menu-container">
+              <a routerLink="/dashboard">Voitures</a>
+              <div class="menu">
+                <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/add-voiture">Ajouter</a>
+                <!-- <a class="dropdown-item" href="#">Lister</a> -->
+                <a class="dropdown-item" routerLink="/rechercheParCategorie" >Recherche Par
+                  Catégorie</a>
+                  <a class="dropdown-item" routerLink="/rechercheParNom" >Recherche Par Nom</a>
+                  <a *ngIf="authService.isAdmin() " class="dropdown-item" routerLink="/listeCategories" >Gestion des catégories</a>
+                  <a *ngIf="authService.isAdmin() " class="dropdown-item" routerLink="/users" >Gestion des Utilisateurs</a>
+
+              
+              </div>
+          </li>
+            
+             
+<!--               <li>
+                  <a routerLink="/panier">
+                      Panier <span ></span>
+                  </a>
+              </li> -->
+              <li> <a class="nav-link">Hello {{authService.loggedUser}}</a></li> 
+              <a *ngIf="!authService.isloggedIn" class="dropdown-item" routerLink = "login">LogIn</a>
+              <a (click) = "onLogout()">LogOut</a>
+
+
+              
+             
+          </UL>
+          
+      </nav>
+  </div>
+  </header>
+
+
+
+
+<router-outlet></router-outlet>
+
+

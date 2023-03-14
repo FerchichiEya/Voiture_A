@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <label>Categories </label>
+        <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="IdCategorie"
+            (change)="onChange()">
+            <option *ngFor="let cat of categories" value="{{cat.idCat}}">
+                {{cat.nomCat}}
+            </option>
+        </select>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+
+            <ul>
+  
+                <li *ngFor="let voiture of voitures">
+                    
+                   <a routerLink="{{voiture.idVoiture}}">
+                    <img [src]="voiture.imageUrl" [alt]="voiture.nomVoiture">
+            
+                        <div class="content">
+                            <div class="name">{{voiture.nomVoiture}}</div>
+                            <div class="name"> {{voiture.prixVoiture}}</div>
+                            <div class="name"> {{voiture?.categorie?.nomCat}}</div>
+                    
+                        </div>
+            
+                    </a>
+                    
+                
+                       
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

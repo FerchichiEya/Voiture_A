@@ -1,0 +1,43 @@
+<div class="container">
+
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+            <br><br>
+            <label>Nom  De Voiture en tapant</label>
+            <input type="text" class="form-control" [(ngModel)]="nomVoiture" name="nomVoiture" class="form-control">
+            <br><br><button type="submit" (click)="rechercherV()" class="btn btn-outline-primary mb-2 ml-2">Rechercher</button>
+            </div>
+        </form><br><br>
+    <div class="card shadow mb-4">
+        
+        <div class="card-body">
+
+            <table class="table table-striped">
+                <thead> 
+                    <tr>
+                        <th>Liste des Voitures</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Date Création</th>
+                    <th>Catégorie</th>
+                </tr>
+                <tbody *ngFor="let voiture of voitures ">
+                    <tr>
+                        <td>{{voiture.idVoiture}}</td>
+                        <td>{{voiture.nomVoiture}}</td>
+
+                        <td>{{voiture.prixVoiture}}</td>
+
+                        <td>{{voiture.dateCreation |date:'dd/MM/yyyy'}}</td>
+
+                        <td>{{voiture.categorie!.nomCat}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+
+
+
+<div *ngIf="voiture.idVoiture" class="container">
+  <img [src]="voiture.imageUrl" [alt]="voiture.nomVoiture"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{voiture.nomVoiture}}
+      </span>
+      </div>
+      <br><br>
+      
+      <div class="">
+      <span>
+        {{voiture.detail}}
+      </span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{voiture.prixVoiture | currency}}
+      </span>
+    </div>
+<div>     <button >Ajouter au Panier</button>
+</div>
+
+  </div>
+</div> 
+
+
+
+    
+ 

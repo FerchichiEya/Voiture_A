@@ -1,0 +1,63 @@
+<!-- 
+<br><br><br><br>
+<!DOCTYPE html>
+<html>
+<head>
+<title> CSS Login Screen Tutorial </title>
+</head>
+<body>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+            <div class="alert alert-danger" *ngIf="err==1">
+                <strong>login ou mot de passe erronés..</strong>
+            </div>
+          <div class="login-header">
+            <h3>LOGIN</h3>
+          </div>
+        </div>
+        <form class="login-form">
+            <label>Nom Utilisateur :</label>
+            <input type="text" name="username" class="form-control" [(ngModel)]="user.username">
+            <label>Mot de passe :</label>
+            <input type="password" name="password" [(ngModel)]="user.password" class="form-control">
+            <button type="button" (click)="onLoggedin()" class="btn btn-success">Connexion</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+</body>
+</body>
+</html> -->
+
+
+<div class="container">
+  <div class="body d-md-flex align-items-center justify-content-between">
+      <div class="box-1 mt-md-0 mt-5">
+          <img src="https://www.citroen.tn/wp-content/uploads/2019/02/r%C3%A9ussir-son-inscription.png"
+              class="" alt="">
+      </div>
+      <div class=" box-2 d-flex flex-column h-100">
+          <div class="mt-5">
+            <br>
+        <div class="login-header">
+          <h3>Se Connecter</h3><br>
+        </div>
+            <form class="login-form">
+              <label>Nom Utilisateur :</label>
+              <input type="text" name="username" class="form-control" [(ngModel)]="user.username" >
+              <label>Mot de passe :</label>
+              <input type="password" name="password" [(ngModel)]="user.password" class="form-control"><br>
+              <button type="button" (click)="onLoggedin()" class="btn btn-success">Connexion</button><br><br>
+              <a [routerLink]="['/add-user']">Créer un nouveau compte </a>
+          </form>
+                  
+                  
+              
+          </div>
+         
+      </div>
+      <span class="fas fa-times"></span>
+  </div>
+</div>
